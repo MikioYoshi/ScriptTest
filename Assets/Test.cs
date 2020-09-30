@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Boss
 {
-    private int hp = 100;     //体力
-    private int power = 25;　 //攻撃力
+    private int hp = 100;    //体力
+    private int power = 25;  //攻撃力
+    private int mp = 53;     //魔法攻撃力
 
     //攻撃用の関数
     public void Attack()
@@ -20,6 +21,22 @@ public class Boss
 
         //残りhpを減らす
         this.hp -= damage;
+    }
+
+    //魔法攻撃の関数
+    public void Magic()
+    {
+        //残りmpを減らす
+        this.mp -= 5;
+
+        if(this.mp >= 0)
+        {
+            Debug.Log("魔法攻撃をした。残りMPは" + this.mp);
+        }
+        else
+        {
+            Debug.Log("MPが足りないため魔法が使えない。");
+        }
     }
 }
 
@@ -48,6 +65,9 @@ public class Test : MonoBehaviour
 
         //防御用の関数を呼び出す
         lastboss.Defence(3);
+
+        //魔法攻撃の関数を呼び出す
+        lastboss.Magic();
     }
 
     // Update is called once per frame

@@ -31,7 +31,7 @@ public class Boss
 
         if(this.mp >= 0)
         {
-            Debug.Log("魔法攻撃をした。残りMPは" + this.mp);
+            Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "." + "。");
         }
         else
         {
@@ -45,14 +45,18 @@ public class Test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //要素数8の配列を初期化する
         int[] points = {10, 30, 44, 67, 21, 43, 23, 78};
 
+        //配列の要素数のぶんだけ処理を繰り返す
+        //順番に取り出す
         for(int i = 0; i < points.Length; i++)
         {
             Debug.Log(points [i]);
         }
 
-        for(int i = points.Length - 1; 0 <= i; i--)
+        //逆順に取り出す
+        for (int i = points.Length - 1; 0 <= i; i--)
         {
             Debug.Log(points [i]);
         }
@@ -68,6 +72,12 @@ public class Test : MonoBehaviour
 
         //魔法攻撃の関数を呼び出す
         lastboss.Magic();
+
+        //魔法攻撃を10回使う
+        for(int i = 0; i < 10; i++)
+        {
+            lastboss.Magic();
+        }
     }
 
     // Update is called once per frame

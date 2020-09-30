@@ -31,7 +31,7 @@ public class Boss
 
         if(this.mp >= 0)
         {
-            Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "." + "。");
+            Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
         }
         else
         {
@@ -46,7 +46,7 @@ public class Test : MonoBehaviour
     void Start()
     {
         //要素数8の配列を初期化する
-        int[] points = {10, 30, 44, 67, 21, 43, 23, 78};
+        int[] points = {44, 67, 43, 23, 78};
 
         //配列の要素数のぶんだけ処理を繰り返す
         //順番に取り出す

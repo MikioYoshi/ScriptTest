@@ -26,11 +26,10 @@ public class Boss
     //魔法攻撃の関数
     public void Magic()
     {
-        //残りmpを減らす
-        this.mp -= 5;
-
-        if(this.mp > 0)
+        if(this.mp >= 5)
         {
+            //残りmpを減らす
+            this.mp -= 5;
             Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
         }
         else

@@ -29,7 +29,7 @@ public class Boss
         //残りmpを減らす
         this.mp -= 5;
 
-        if(this.mp >= 0)
+        if(this.mp > 0)
         {
             Debug.Log("魔法攻撃をした。残りMPは" + this.mp + "。");
         }
